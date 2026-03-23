@@ -1,8 +1,8 @@
 /* Color Palette and Variables */
 :root {
-    --bg-color: #0a192f;
-    --text-main: #8892b0;
-    --text-light: #ccd6f6;
+    --bg-color: #523DF5;
+    --text-main: #3D84F5;
+    --text-light: #AE3DF5;
     --accent: #64ffda;
     --card-bg: #112240;
     --font-mono: 'Courier New', Courier, monospace;
