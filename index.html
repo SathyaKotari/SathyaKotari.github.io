@@ -3,56 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sathya | Engineering Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sathya Kotari | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">SathyaK.</div>
+            <ul class="nav-links">
+                <li><a href="#home">// Home</a></li>
+                <li><a href="#about">// About</a></li>
+                <li><a href="#experience">// Experience</a></li>
+                <li><a href="#projects">// Projects</a></li>
+                <li><a href="#contact">// Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <header class="p-6 max-w-5xl mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold tracking-tight">SATHYA <span class="text-blue-600">.</span></h1>
-        <nav class="space-x-6 font-medium">
-            <a href="#projects" class="hover:text-blue-600">Projects</a>
-            <a href="#skills" class="hover:text-blue-600">Skills</a>
-        </nav>
-    </header>
-
-    <section class="max-w-5xl mx-auto px-6 py-20">
-        <h2 class="text-5xl font-extrabold mb-4">Engineering student specializing in <span class="text-blue-600">Robotics & TinyML.</span></h2>
-        <p class="text-xl text-slate-600 max-w-2xl">Currently studying at Western University, designing PCBs for Mars Rovers and building autonomous VTOL systems.</p>
+    <section id="home" class="hero container">
+        <p class="intro">Hi, my name is</p>
+        <h1>Sathya Krishna Kotari</h1>
+        <h2>I build intelligent systems and robotics.</h2>
+        <p class="hero-desc">
+            I am a Western University Student pursuing a Bachelor of Engineering Science. I am deeply passionate about bridging the gap between hardware and software through robotics, TinyML, and machine vision.
+        </p>
+        <a href="#projects" class="btn-primary">Check Out My Work!</a>
     </section>
 
-    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-bold mb-8">Selected Projects</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <span class="text-blue-600 font-semibold text-sm uppercase">Aerospace</span>
-                <h4 class="text-xl font-bold mt-2">VTOL Tilt-Rotor Drone</h4>
-                <p class="mt-2 text-slate-600">Designed a custom VTOL system in SolidWorks, optimizing for transition flight stability.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <span class="text-green-600 font-semibold text-sm uppercase">Embedded Systems</span>
-                <h4 class="text-xl font-bold mt-2">TinyML Gesture Recognition</h4>
-                <p class="mt-2 text-slate-600">Deploying efficient machine learning models to microcontrollers for real-time interaction.</p>
-            </div>
+    <section id="about" class="container">
+        <h3 class="section-title">// About Me</h3>
+        <div class="about-content">
+            <p>
+                Hey! I'm Sathya. I enjoy creating complex electromechanical systems and exploring how code can interact with the physical world. From leading the design for FRC Team 1325 to designing battery management systems, my focus is on functional, modular design. 
+            </p>
+            <p>Here are some of the tools and software I've been working with recently:</p>
+            <ul class="skills-list">
+                <li>C++ / Python / Java</li>
+                <li>TensorFlow (TinyML)</li>
+                <li>SolidWorks / Fusion 360</li>
+                <li>Altium</li>
+            </ul>
         </div>
     </section>
 
-    <section id="skills" class="bg-slate-900 text-white py-16">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="text-2xl font-bold mb-8">Technical Toolkit</h3>
-            <div class="flex flex-wrap gap-4">
-                <span class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700">C++</span>
-                <span class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700">Python</span>
-                <span class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700">SolidWorks</span>
-                <span class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700">PCB Design (Altium/KiCad)</span>
-                <span class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700">Machine Vision</span>
-            </div>
+    <section id="experience" class="container">
+        <h3 class="section-title">// My Experience</h3>
+        <div class="experience-card">
+            <h4>VCycene - Internship</h4>
+            <p class="date">Scarborough, ON</p>
+            <ul>
+                <li>Designed a new product with Fusion 360 to help market the company.</li>
+                <li>Prototyped the product using 3D printers.</li>
+            </ul>
         </div>
     </section>
 
-    <footer class="text-center py-10 text-slate-400 text-sm">
-        © 2026 Sathya | Built with passion for Engineering
-    </footer>
+    <section id="projects" class="container">
+        <h3 class="section-title">// Projects</h3>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>3 Jointed Arm</h4>
+                    <p>Designed 3D printed parts and programmed the robotic arm utilizing inverse kinematics principles.</p>
+                    <div class="tech-tags">
+                        <span>SolidWorks</span>
+                        <span>Inverse Kinematics</span>
+                    </div>
+                    <a href="project-3-jointed-arm.html" class="btn-secondary">View Details & CAD &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>WE BOTS Battery Management System</h4>
+                    <p>Designed a BMS in Altium to monitor battery health, bypass packs, and facilitate wall charging for 5 battery packs.</p>
+                    <div class="tech-tags">
+                        <span>Altium</span>
+                        <span>Circuit Design</span>
+                    </div>
+                    <a href="project-bms.html" class="btn-secondary">View Details &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Gesture Recognition on ESP-32</h4>
+                    <p>Built and deployed TinyML models using Python and TensorFlow, taking refined sensor data via C++ on an ESP-32.</p>
+                    <div class="tech-tags">
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                    </div>
+                    <a href="project-gesture.html" class="btn-secondary">View Details &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="container contact-section">
+        <h3 class="section-title">// Contact Me</h3>
+        <p>I'd love to chat about robotics, engineering, or new opportunities!</p>
+        <div class="contact-links">
+            <a href="mailto:sathya.kotari@gmail.com" class="btn-primary">Say Hello!</a>
+        </div>
+        <p class="footer-info">sathya.kotari@gmail.com | (437) 986-3341 | <a href="https://github.com/SathyaKotari">GitHub</a></p>
+    </section>
 
 </body>
 </html>
