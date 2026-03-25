@@ -1,82 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sathya Kotari | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <nav>
-        <div class="nav-inner">
-            <div class="logo">Sathya<span>.</span>Kotari</div>
-            <div class="nav-links">
-                <a href="#experience">// Experience</a>
-                <a href="#projects">// Projects</a>
-                <a href="#contact">// Contact</a>
-                <a href="https://github.com/SathyaKotari/Resume/blob/main/Sathya_Kotari_Resume.pdf" class="nav-resume" target="_blank">Resume</a>
+<section id="projects" class="container section-spacer">
+    <h3 class="section-label">// Project Work</h3>
+    <div class="project-grid">
+        
+        <div class="project-card">
+            <p class="mono-text card-tag">Public Repo</p>
+            <h4>3-Jointed-Arm</h4>
+            <p>A 3-jointed arm project using an **Arduino Uno**, 3D printing, and **Inverse Kinematics** principles[cite: 19, 20, 21].</p>
+            <div class="tech-stack">
+                <span>Arduino</span><span>SolidWorks</span><span>Kinematics</span>
             </div>
+            <a href="https://github.com/SathyaKotari/3-Jointed-Arm" class="btn-ghost" target="_blank">View Code &rarr;</a>
         </div>
-    </nav>
 
-    <main>
-        <section id="hero" class="container">
-            <div class="hero-content">
-                <p class="mono-text">Bachelor of Engineering Science @ Western University</p>
-                <h1>Sathya Krishna Kotari<span>.</span></h1>
-                <h2>Robotics & Intelligent Systems</h2>
-                <p class="description">
-                    I build modular electromechanical systems, bridging the gap between hardware and software through **TinyML**, **Robotics**, and **Machine Vision**.
-                </p>
-                <div class="hero-cta">
-                    <a href="https://github.com/SathyaKotari/Resume/blob/main/Sathya_Kotari_Resume.pdf" class="btn-main" target="_blank">View Resume (GitHub)</a>
-                    <a href="#projects" class="btn-ghost">See Projects</a>
-                </div>
+        <div class="project-card">
+            <p class="mono-text card-tag">Public Repo</p>
+            <h4>Esp32-tinyML-gesture-recognition</h4>
+            <p>Created a gesture recognition project using **TensorFlow Lite**, an **ESP-32**, and an **MPU-6050** sensor[cite: 22, 25, 26].</p>
+            <div class="tech-stack">
+                <span>TensorFlow</span><span>C++</span><span>Python</span>
             </div>
-        </section>
+            <a href="https://github.com/SathyaKotari/Esp32-tinyML-gesture-recognition" class="btn-ghost" target="_blank">View Code &rarr;</a>
+        </div>
 
-        <section id="experience" class="container section-spacer">
-            <h3 class="section-label">// Experience</h3>
-            
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h4>Mechanical Design Intern <span class="highlight">@ VCycene</span></h4>
-                    <p class="mono-text">Scarborough, ON</p>
-                </div>
-                <ul class="exp-details">
-                    <li>Engineered a new product using **Fusion 360** to assist in company marketing efforts.</li>
-                    <li>Developed functional prototypes using **3D printing** technologies.</li>
-                </ul>
+        <div class="project-card">
+            <p class="mono-text card-tag">Internship Project</p>
+            <h4>Lila-mvp</h4>
+            <p>Designed a hand-sized, cost-effective, and 3D-printable product to market the LILA composter for **VCycene**.</p>
+            <div class="tech-stack">
+                <span>Fusion 360</span><span>3D Printing</span><span>Marketing</span>
             </div>
+            <a href="https://github.com/SathyaKotari/Lila-mvp" class="btn-ghost" target="_blank">View Details &rarr;</a>
+        </div>
 
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h4>Electrical Subteam <span class="highlight">@ WE BOTS (Western Mars Rover)</span></h4>
-                    <p class="mono-text">Sept 2025 - Present</p>
-                </div>
-                <ul class="exp-details">
-                    <li>Designing a **Battery Management System (BMS)** in Altium for 5 battery packs.</li>
-                    <li>Implementing features for health monitoring, pack bypassing, and wall charging.</li>
-                </ul>
+        <div class="project-card">
+            <p class="mono-text card-tag">Personal Project</p>
+            <h4>Revell-Saturn5-Rocket-Model-Stand</h4>
+            <p>Designed and **3D printed** a custom, aesthetically pleasing stand for a Revell Saturn 5 model kit.</p>
+            <div class="tech-stack">
+                <span>CAD</span><span>3D Printing</span><span>Product Design</span>
             </div>
-        </section>
+            <a href="https://github.com/SathyaKotari/Revell-Saturn5-Rocket-Model-Stand" class="btn-ghost" target="_blank">View Files &rarr;</a>
+        </div>
 
-        <section id="projects" class="container section-spacer">
-            <h3 class="section-label">// Project Work</h3>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <p class="mono-text card-tag">TinyML / Embedded</p>
-                    <h4>Gesture Recognition ESP-32</h4>
-                    <p>Deployed TinyML models using **Python** and **TensorFlow**, utilizing **C++** to refine real-time sensor data.</p>
-                    <div class="tech-stack">
-                        <span>TensorFlow</span><span>ESP-32</span><span>C++</span>
-                    </div>
-                </div>
+        <div class="project-card">
+            <p class="mono-text card-tag">Competition</p>
+            <h4>School-robotics-Team-SumBot-Design</h4>
+            <p>Led the design for a sumobot that competed at the **McMaster Sumobot Competition**, securing a **top 10 finish**[cite: 32].</p>
+            <div class="tech-stack">
+                <span>Robotics</span><span>Mechatronics</span><span>Circuitry</span>
+            </div>
+            <a href="https://github.com/SathyaKotari/School-robotics-Team-SumBot-Design" class="btn-ghost" target="_blank">View Repo &rarr;</a>
+        </div>
 
-                <div class="project-card">
-                    <p class="mono-text card-tag">Robotics</p>
-                    <h4>3-Jointed Robotic Arm</h4>
-                    <p>Designed custom 3D printed components in **SolidWorks** and implemented movement via **inverse kinematics**
+        <div class="project-card">
+            <p class="mono-text card-tag">Advanced Robotics</p>
+            <h4>Tilt-Rotor-VTOL-Drone</h4>
+            <p>Development of a **Tilt-Rotor Vertical Take-Off and Landing (VTOL)** drone system.</p>
+            <div class="tech-stack">
+                <span>Flight Control</span><span>Embedded Systems</span><span>UAV</span>
+            </div>
+            <a href="https://github.com/SathyaKotari/Tilt-Rotor-VTOL-Drone" class="btn-ghost" target="_blank">View Repo &rarr;</a>
+        </div>
+
+    </div>
+</section>
