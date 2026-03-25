@@ -1,66 +1,306 @@
-<section id="projects" class="container section-spacer">
-    <h3 class="section-label">// Project Work</h3>
-    <div class="project-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathya Kotari | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0a192f;
+            --bg-card: #112240;
+            --accent: #64ffda;
+            --text-main: #ccd6f6;
+            --text-dim: #8892b0;
+            --nav-bg: #0a192f;
+            --font-mono: 'Space Mono', monospace;
+            --font-sans: 'Inter', sans-serif;
+            --section-gap: 120px;
+        }
+
+        /* Basic Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg);
+            color: var(--text-dim);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation - Fixed Overlap */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--nav-bg);
+            z-index: 9999;
+            border-bottom: 1px solid #233554;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-inner {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .nav-resume {
+            border: 1px solid var(--accent);
+            padding: 8px 15px;
+            border-radius: 4px;
+            color: var(--accent) !important;
+        }
+
+        /* Layout Containers */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-spacer {
+            padding-top: var(--section-gap);
+            padding-bottom: var(--section-gap);
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px; /* Space for fixed nav */
+        }
+
+        h1 { font-size: clamp(40px, 8vw, 80px); color: var(--text-main); line-height: 1.1; }
+        h1 span { color: var(--accent); }
+        h2 { font-size: clamp(24px, 5vw, 48px); color: var(--text-dim); margin-top: 10px; }
+
+        .hero-desc { max-width: 600px; margin: 30px 0; font-size: 1.2rem; }
+        .hero-cta { margin-top: 40px; }
+
+        /* Buttons */
+        .btn-main {
+            display: inline-block;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 18px 30px;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            border-radius: 4px;
+            transition: 0.3s;
+            margin-right: 20px;
+        }
+        .btn-main:hover { background: rgba(100, 255, 218, 0.1); }
+
+        /* Section Titles */
+        .section-label {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .section-label::after {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 1px;
+            background: #233554;
+            margin-left: 20px;
+        }
+
+        /* Experience Items */
+        .exp-item { margin-bottom: 60px; }
+        .exp-header h4 { font-size: 1.4rem; color: var(--text-main); }
+        .highlight { color: var(--accent); }
+        .mono-text { font-family: var(--font-mono); color: var(--accent); font-size: 0.85rem; }
         
-        <div class="project-card">
-            <p class="mono-text card-tag">Public Repo</p>
-            <h4>3-Jointed-Arm</h4>
-            <p>A 3-jointed arm project using an <strong>Arduino Uno</strong>strong>, 3D printing, and <strong>Inverse Kinematics</strong>strong> principles[cite: 19, 20, 21].</p>
-            <div class="tech-stack">
-                <span>Arduino</span><span>SolidWorks</span><span>Kinematics</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/3-Jointed-Arm" class="btn-ghost" target="_blank">View Code &rarr;</a>
-        </div>
+        .exp-details { list-style: none; margin-top: 15px; }
+        .exp-details li { margin-bottom: 10px; position: relative; padding-left: 25px; }
+        .exp-details li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
 
-        <div class="project-card">
-            <p class="mono-text card-tag">Public Repo</p>
-            <h4>Esp32-tinyML-gesture-recognition</h4>
-            <p>Created a gesture recognition project using <strong>TensorFlow Lite</strong>strong>, an ESP-32, and an MPU-6050 sensor[cite: 22, 25, 26].</p>
-            <div class="tech-stack">
-                <span>TensorFlow</span><span>C++</span><span>Python</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/Esp32-tinyML-gesture-recognition" class="btn-ghost" target="_blank">View Code &rarr;</a>
-        </div>
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-        <div class="project-card">
-            <p class="mono-text card-tag">Internship Project</p>
-            <h4>Lila-mvp</h4>
-            <p>Designed a hand-sized, cost-effective, and 3D-printable product to market the LILA composter for **VCycene**.</p>
-            <div class="tech-stack">
-                <span>Fusion 360</span><span>3D Printing</span><span>Marketing</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/Lila-mvp" class="btn-ghost" target="_blank">View Details &rarr;</a>
-        </div>
+        .project-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
 
-        <div class="project-card">
-            <p class="mono-text card-tag">Personal Project</p>
-            <h4>Revell-Saturn5-Rocket-Model-Stand</h4>
-            <p>Designed and <strong>3D printed</strong> a custom, aesthetically pleasing stand for a Revell Saturn 5 model kit.</p>
-            <div class="tech-stack">
-                <span>CAD</span><span>3D Printing</span><span>Product Design</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/Revell-Saturn5-Rocket-Model-Stand" class="btn-ghost" target="_blank">View Files &rarr;</a>
-        </div>
+        .project-card h4 { color: var(--text-main); font-size: 1.25rem; margin-bottom: 15px; }
+        .project-card p { font-size: 0.95rem; margin-bottom: 20px; }
 
-        <div class="project-card">
-            <p class="mono-text card-tag">Competition</p>
-            <h4>School-robotics-Team-SumBot-Design</h4>
-            <p>Led the design for a sumobot that competed at the **McMaster Sumobot Competition**, securing a **top 10 finish**[cite: 32].</p>
-            <div class="tech-stack">
-                <span>Robotics</span><span>Mechatronics</span><span>Circuitry</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/School-robotics-Team-SumBot-Design" class="btn-ghost" target="_blank">View Repo &rarr;</a>
-        </div>
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+        .tech-stack span {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            background: rgba(100, 255, 218, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
 
-        <div class="project-card">
-            <p class="mono-text card-tag">Advanced Robotics</p>
-            <h4>Tilt-Rotor-VTOL-Drone</h4>
-            <p>Development of a **Tilt-Rotor Vertical Take-Off and Landing (VTOL)** drone system.</p>
-            <div class="tech-stack">
-                <span>Flight Control</span><span>Embedded Systems</span><span>UAV</span>
-            </div>
-            <a href="https://github.com/SathyaKotari/Tilt-Rotor-VTOL-Drone" class="btn-ghost" target="_blank">View Repo &rarr;</a>
-        </div>
+        .view-link {
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+        .view-link:hover { color: var(--accent); }
 
-    </div>
-</section>
+        /* Footer/Contact */
+        .contact-box { text-align: center; max-width: 600px; margin: 0 auto; }
+        .contact-box h2 { font-size: clamp(32px, 5vw, 60px); color: var(--text-main); margin-bottom: 20px; }
+        .contact-links { margin-top: 40px; font-family: var(--font-mono); }
+        .contact-links a { color: var(--accent); text-decoration: none; margin: 0 15px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .container { padding: 0 25px; }
+            .section-spacer { padding-top: 60px; padding-bottom: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">Sathya<span>.</span>Kotari</div>
+            <div class="nav-links">
+                <a href="#experience">// Experience</a>
+                <a href="#projects">// Projects</a>
+                <a href="#contact">// Contact</a>
+                <a href="https://github.com/SathyaKotari" class="nav-resume" target="_blank">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section id="hero">
+            <div>
+                <p class="mono-text">Engineering Science Student @ Western University</p>
+                <h1>Sathya Krishna Kotari<span>.</span></h1>
+                <h2>I build intelligent robotics.</h2>
+                <p class="hero-desc">
+                    Bridging the gap between hardware and software through <strong>TinyML</strong>, <strong>Robotics</strong>, and <strong>Machine Vision</strong>. I focus on creating functional, modular electromechanical systems.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://github.com/SathyaKotari" class="btn-main" target="_blank">View GitHub Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-spacer">
+            <h3 class="section-label">Experience</h3>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h4>Mechanical Design Intern <span class="highlight">@ VCycene</span></h4>
+                    <p class="mono-text">Scarborough, ON</p>
+                </div>
+                <ul class="exp-details">
+                    <li>Designed a new product using <strong>Fusion 360</strong> to help market the company.</li>
+                    <li>Prototyped functional models using <strong>3D printers</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h4>Electrical Subteam <span class="highlight">@ WE BOTS (Western Mars Rover)</span></h4>
+                    <p class="mono-text">Sept 2025 - Present</p>
+                </div>
+                <ul class="exp-details">
+                    <li>Designing a <strong>Battery Management System (BMS)</strong> in Altium for 5 battery packs.</li>
+                    <li>Implementing health monitoring, pack bypassing, and charging circuitry.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section-spacer">
+            <h3 class="section-label">Project Work</h3>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <p class="mono-text">Robotics</p>
+                    <h4>3-Jointed-Arm</h4>
+                    <p>Designed custom 3D printed parts in <strong>SolidWorks</strong> and implemented movement via <strong>Inverse Kinematics</strong>.</p>
+                    <div class="tech-stack">
+                        <span>Arduino</span><span>Kinematics</span><span>CAD</span>
+                    </div>
+                    <a href="https://github.com/SathyaKotari/3-Jointed-Arm" class="view-link" target="_blank">View Code &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <p class="mono-text">TinyML</p>
+                    <h4>Esp32-tinyML-gesture</h4>
+                    <p>Gesture recognition system using <strong>TensorFlow Lite</strong>, an <strong>ESP-32</strong>, and MPU-6050 sensor data.</p>
+                    <div class="tech-stack">
+                        <span>TensorFlow</span><span>C++</span><span>Python</span>
+                    </div>
+                    <a href="https://github.com/SathyaKotari/Esp32-tinyML-gesture-recognition" class="view-link" target="_blank">View Code &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <p class="mono-text">Internship</p>
+                    <h4>Lila-mvp</h4>
+                    <p>Hand-sized, cost-effective 3D-printable product designed to market the LILA composter for VCycene.</p>
+                    <div class="tech-stack">
+                        <span>Fusion 360</span><span>Manufacturing</span>
+                    </div>
+                    <a href="https://github.com/SathyaKotari" class="view-link" target="_blank">View Project &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <p class="mono-text">Robotics</p>
+                    <h4>SumBot Design</h4>
+                    <p>Lead designer for a sumobot that competed at McMaster, securing a <strong>top 10 finish</strong>.</p>
+                    <div class="
