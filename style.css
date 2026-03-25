@@ -234,9 +234,10 @@ section { padding: 100px 0; }
     text-decoration: none;
     font-family: var(--font-mono);
     border-radius: 4px;
-    margin-top: 40px;
+    margin-top: 50px; 
     transition: var(--transition);
 }
+
 
 .btn-primary:hover { background: rgba(100, 255, 218, 0.1); }
 
